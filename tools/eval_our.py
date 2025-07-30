@@ -1012,7 +1012,7 @@ CKPT_MAPPING = {
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--task", type=str, default="move_near", help="task name")
-parser.add_argument("--log-dir-root", type=str, default="/data/workspace/SimplerEnv/results", help="log directory")
+parser.add_argument("--log-dir-root", type=str, default="results", help="log directory")
 
 args = parser.parse_args()
 

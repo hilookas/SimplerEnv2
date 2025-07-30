@@ -10,7 +10,7 @@ from typing import Optional
 
 from tqdm import tqdm
 from urdf_parser_py.urdf import Robot, Box, Mesh, Cylinder
-from torchprimitivesdf import box_sdf, transform_points_inverse, fixed_transform_points_inverse
+# from torchprimitivesdf import box_sdf, transform_points_inverse, fixed_transform_points_inverse
 import pytorch3d.structures
 import pytorch3d.ops
 import plotly.graph_objects as go

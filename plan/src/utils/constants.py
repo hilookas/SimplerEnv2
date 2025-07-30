@@ -16,12 +16,12 @@ IMAGE_EXTRINSICS = np.array([
 ], dtype=np.float32)
 
 
-# ROBOT_URDF = '/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/google_robot_meta_sim_fix_wheel_fix_fingertip.urdf'
+# ROBOT_URDF = 'ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/google_robot_meta_sim_fix_wheel_fix_fingertip.urdf'
 ROBOT_JOINTS_NOFINGER_GOOGLEROBOT = ['joint_torso', 'joint_shoulder', 'joint_bicep', 'joint_elbow', 'joint_forearm', 'joint_wrist', 'joint_gripper', 'joint_head_pan', 'joint_head_tilt'] 
 ROBOT_JOINTS_GOOGLEROBOT = ['joint_torso', 'joint_shoulder', 'joint_bicep', 'joint_elbow', 'joint_forearm','joint_wrist', 'joint_gripper', 'joint_finger_right', 'joint_finger_left', 'joint_head_pan', 'joint_head_tilt'] 
 
 # for widowx
-# ROBOT_URDF = '/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/wx250s.urdf'
+# ROBOT_URDF = 'ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/wx250s.urdf'
 ROBOT_JOINTS_WIDOWX = ['waist', 'shoulder', 'elbow', 'forearm_roll', 'wrist_angle', 'wrist_rotate', 'left_finger', 'right_finger']
 ROBOT_JOINTS_NOFINGER_WIDOWX  = ['waist', 'shoulder', 'elbow', 'forearm_roll', 'wrist_angle', 'wrist_rotate']
 
@@ -32,10 +32,10 @@ ROBOT_JOINTS_NOFINGER_WIDOWX  = ['waist', 'shoulder', 'elbow', 'forearm_roll', '
 
 
 # ARM_URDF = './robot_models/franka/franka_without_gripper.urdf'
-ARM_URDF_GOOGLE_ROBOT = '/data/workspace/SimplerEnv/plan/robot_models/google_robot/google_robot_without_gripper.urdf'
-ARM_URDF_FULL_GOOGLE_ROBOT = '/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/ik_google_robot.urdf'
-ARM_URDF_WIDOWX = '/data/workspace/SimplerEnv/plan/robot_models/widowx/widowx_robot_without_gripper.urdf'
-ARM_URDF_FULL_WIDOWX = '/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s.urdf'
+ARM_URDF_GOOGLE_ROBOT = 'plan/robot_models/google_robot/google_robot_without_gripper.urdf'
+ARM_URDF_FULL_GOOGLE_ROBOT = 'ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/ik_google_robot.urdf'
+ARM_URDF_WIDOWX = 'plan/robot_models/widowx/widowx_robot_without_gripper.urdf'
+ARM_URDF_FULL_WIDOWX = 'ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s.urdf'
 FRANKA_GRIPPER_DEPTH = 0.005
 DGN_GRIPPER_DEPTH = 0.04
 
@@ -70,6 +70,6 @@ RAND_RAIDUS = 0.1
 #                 np.array([[-0.03150471, -0.10394307, -0.02591177], [0.03150447, 0.09628979, 0.01499266]])],
 # )
 
-FRANKA_COLLISION_FILE = '/data/workspace/SimplerEnv/plan/robot_models/franka/curobo/franka_mesh.yml'
+FRANKA_COLLISION_FILE = 'plan/robot_models/franka/curobo/franka_mesh.yml'
 # FRANKA_CUROBO_FILE = 'robot_models/franka/curobo/franka.yml'
-FRANKA_CUROBO_FILE = '/data/workspace/SimplerEnv/plan/robot_models/google_robot/curobo/google_robot.yml'
+FRANKA_CUROBO_FILE = 'plan/robot_models/google_robot/curobo/google_robot.yml'

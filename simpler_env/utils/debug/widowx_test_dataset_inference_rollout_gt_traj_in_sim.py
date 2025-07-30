@@ -124,7 +124,7 @@ def main(
 
 
 if __name__ == "__main__":
-    os.environ["DISPLAY"] = ""
+    # os.environ["DISPLAY"] = ""
     dataset_name = DATASETS[1]
     dset = tfds.builder_from_directory(builder_dir=dataset2path(dataset_name))
     save_root = "debug_logs/widowx_test_dataset_inference_rollout_gt_traj_in_sim/"

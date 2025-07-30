@@ -62,10 +62,10 @@ class Planner:
         pass
 
 if __name__ == '__main__':
-    pcd = np.load('/data/workspace/SimplerEnv/scene.npy')
+    pcd = np.load('scene.npy')
     cfg = DotDict(
     #    urdf='robot_models/franka/franka_with_gripper_extensions.urdf',
-        urdf='/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/google_robot_meta_sim_fix_wheel_fix_fingertip.urdf',
+        urdf='ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/googlerobot_description/google_robot_meta_sim_fix_wheel_fix_fingertip.urdf',
         pc=torch.tensor(pcd),
     )
     

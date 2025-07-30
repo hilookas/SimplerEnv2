@@ -47,9 +47,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="scale urdf and mesh files",
     )
-    parser.add_argument("input_urdf", nargs="?", default="/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/wx250s.urdf", help="输入的 URDF 文件路径")
-    parser.add_argument("output_urdf", nargs="?", default="/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s.urdf", help="输出修改后的 URDF 文件路径")
-    parser.add_argument("mesh_output_folder", nargs="?", default="/data/workspace/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s", help="缩放后的 mesh 文件保存的新文件夹")
+    parser.add_argument("input_urdf", nargs="?", default="ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/wx250s.urdf", help="输入的 URDF 文件路径")
+    parser.add_argument("output_urdf", nargs="?", default="ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s.urdf", help="输出修改后的 URDF 文件路径")
+    parser.add_argument("mesh_output_folder", nargs="?", default="ManiSkill2_real2sim/mani_skill2_real2sim/assets/descriptions/widowx_description/scale_wx250s", help="缩放后的 mesh 文件保存的新文件夹")
     parser.add_argument("--scale_factor", type=float, default=1000.0, help="scle factor (default: 1000)")
     args = parser.parse_args()
 

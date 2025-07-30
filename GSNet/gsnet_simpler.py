@@ -303,7 +303,7 @@ def quat2rot_matrice(quat):
 
 
 
-def grasp_inference(task_description, intrinsic,  object_mask, masked_points, scene_pc_cam, scne_pc, extrinsics, relative_translation_table, relative_rotation_table, save_path1 ="/data/workspace/SimplerEnv/output/waypoints1.npy", save_path2='/data/workspace/SimplerEnv/output/waypoints2.npy', save_path3='/data/workspace/SimplerEnv/output/waypoints3.npy'):
+def grasp_inference(task_description, intrinsic,  object_mask, masked_points, scene_pc_cam, scne_pc, extrinsics, relative_translation_table, relative_rotation_table, save_path1 ="output/waypoints1.npy", save_path2='output/waypoints2.npy', save_path3='output/waypoints3.npy'):
 
     # masked_points = np.load(pointcloud_path)[:, :3]
     gsnet = GSNet()

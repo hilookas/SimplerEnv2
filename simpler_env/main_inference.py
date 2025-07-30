@@ -9,8 +9,8 @@ from simpler_env.evaluation.maniskill2_evaluator import maniskill2_evaluator
 if __name__ == "__main__":
     args = get_args()
 
-    os.environ["DISPLAY"] = ""
-    # prevent a single jax process from taking up all the GPU memory
+    # os.environ["DISPLAY"] = ""
+    # # prevent a single jax process from taking up all the GPU memory
     os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
     gpus = tf.config.list_physical_devices("GPU")
     if len(gpus) > 0:

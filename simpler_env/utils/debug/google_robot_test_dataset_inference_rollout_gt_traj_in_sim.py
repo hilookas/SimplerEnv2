@@ -132,7 +132,7 @@ def main(
 
 
 if __name__ == "__main__":
-    os.environ["DISPLAY"] = ""
+    # os.environ["DISPLAY"] = ""
     save_root = "debug_logs/google_robot_test_dataset_inference_rollout_gt_traj_in_sim/"
 
     dataset_name = DATASETS[0]

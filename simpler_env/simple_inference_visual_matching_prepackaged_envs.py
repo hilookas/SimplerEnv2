@@ -45,9 +45,9 @@ if args.ckpt_path[-1] == "/":
 logging_dir = os.path.join(args.logging_root, args.task, args.policy, os.path.basename(args.ckpt_path))
 os.makedirs(logging_dir, exist_ok=True)
 
-os.environ["DISPLAY"] = ""
-# prevent a single jax process from taking up all the GPU memory
-os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
+# os.environ["DISPLAY"] = ""
+# # prevent a single jax process from taking up all the GPU memory
+# os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
 gpus = tf.config.list_physical_devices("GPU")
 if len(gpus) > 0:
     # prevent a single tf process from taking up all the GPU memory

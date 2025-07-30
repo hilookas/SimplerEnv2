@@ -39,3 +39,5 @@ videos/
 # testing
 .coverage*
 htmlcov/
+
+data*

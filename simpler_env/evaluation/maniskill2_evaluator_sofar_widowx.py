@@ -41,12 +41,6 @@ from plan.src.utils.ik import IK
 from plan.src.utils.vis_plotly import Vis
 from plan.src.utils.constants import ARM_URDF_FULL_GOOGLE_ROBOT, ARM_URDF_FULL_WIDOWX, ROBOT_JOINTS_WIDOWX, ROBOT_JOINTS_GOOGLEROBOT, FRANKA_COLLISION_FILE, FRANKA_CUROBO_FILE
 
-
-
-
-
-
-
 class Planner:
     def __init__(self, config, fix_joints=[], planner="RRTConnect"):
         self.config = config
@@ -165,12 +159,9 @@ def run_maniskill2_eval_single_episode(
     additional_env_save_tags=None,
     logging_dir="./results",
 ):
-
     if additional_env_build_kwargs is None:
         additional_env_build_kwargs = {}
 
-    
-    control_mode = "arm_pd_ee_pose_gripper_pd_joint_pos"
     control_mode = "arm_pd_joint_pos_gripper_pd_joint_pos"
 
     # Create environment
@@ -184,6 +175,7 @@ def run_maniskill2_eval_single_episode(
         scene_name=scene_name,
         camera_cfgs={"add_segmentation": True},
         rgb_overlay_path=rgb_overlay_path,
+        # render_mode="human",
     )
     if enable_raytracing:
         ray_tracing_dict = {"shader_dir": "rt"}
@@ -236,11 +228,13 @@ def run_maniskill2_eval_single_episode(
     print('Task Start')
     images = []
     for _ in range(3):
-        images, env, obs, done, info = sofar_execution(images, env, obs, obs_camera_name, task_description, additional_env_build_kwargs, env_reset_options)
-        if done:
-            break
-        else:
-            print("this time is not done")
+        try:
+            images, env, obs, done, info = sofar_execution(images, env, obs, obs_camera_name, task_description, additional_env_build_kwargs, env_reset_options)
+            if done:
+                break
+        except Exception as e:
+            print(f"An error occurred in sofar_execution: {e}")
+        print("this time is not done")
     image = get_image_from_maniskill2_obs_dict(env, obs, camera_name=obs_camera_name)
     images.append(image)
     success = "success" if done else "failure"
