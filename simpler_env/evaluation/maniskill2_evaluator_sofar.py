@@ -18,7 +18,7 @@ import numpy as np
 from transforms3d.euler import quat2euler
 import open3d as o3d
 
-from simpler_sofar import sofar
+from simpler import sofar
 from simpler_env.utils.env.env_builder import build_maniskill2_env, get_robot_control_mode
 from simpler_env.utils.env.observation_utils import get_image_from_maniskill2_obs_dict, get_depth_from_maniskill2_obs_dict, \
                                                     get_camera_extrinsics_from_maniskill2_obs_dict, get_pointcloud_in_camera, get_base_pose

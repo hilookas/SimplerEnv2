@@ -30,7 +30,7 @@ from transforms3d.quaternions import axangle2quat, quat2axangle, mat2quat
 import json
 from scipy.spatial.transform import Rotation as R
 from SoFar.depth.utils import transform_point_cloud_nohw, inverse_transform_point_cloud
-from simpler_sofar import sofar
+from simpler import sofar
 
 from plan.src.plan import pb_ompl
 from plan.src.utils.vis_plotly import Vis
